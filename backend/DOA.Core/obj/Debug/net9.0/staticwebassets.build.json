@@ -1,12 +1,1042 @@
 {
   "Version": 1,
-  "Hash": "9Re6jchL5v3FhiYoDZ2vqEFb1g70NEoX6iZKrfuyGjg=",
+  "Hash": "fGbyOfv/92KROhwkDZHBkabpfp7EOG/Th3dPoBkJME8=",
   "Source": "DOA.Core",
   "BasePath": "_content/DOA.Core",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "DOA.Core/wwwroot",
+      "Source": "DOA.Core",
+      "ContentRoot": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/",
+      "BasePath": "_content/DOA.Core",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/9erye4trlu-qzoq83hwfw.gz",
+      "SourceId": "DOA.Core",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/",
+      "BasePath": "_content/DOA.Core",
+      "RelativePath": "index#[.{fingerprint=qzoq83hwfw}]?.html.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.html",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "jd41h2djav",
+      "Integrity": "map9Yx+q8waAJ2x6O56fYtVuXfVWX3I/+zPIg2Jo9oA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.html"
+    },
+    {
+      "Identity": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/c34qr4d0og-z75ayla3fk.gz",
+      "SourceId": "DOA.Core",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/",
+      "BasePath": "_content/DOA.Core",
+      "RelativePath": "index#[.{fingerprint=z75ayla3fk}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "y6vazdewh5",
+      "Integrity": "avOSOcHyCMQotube8oa6dNiSqNT6zxhc6IwMmvZwHKw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.css"
+    },
+    {
+      "Identity": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/ny947uykfk-e6zl0gokhk.gz",
+      "SourceId": "DOA.Core",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/",
+      "BasePath": "_content/DOA.Core",
+      "RelativePath": "index#[.{fingerprint=e6zl0gokhk}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "osdgyyjrcc",
+      "Integrity": "KDxoeDvhYGP7WDH1sXtdZ+JfGgluZLs/f9CAjqQUP/E=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.js"
+    },
+    {
+      "Identity": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.css",
+      "SourceId": "DOA.Core",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/",
+      "BasePath": "_content/DOA.Core",
+      "RelativePath": "index#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "z75ayla3fk",
+      "Integrity": "726eLM6zbapHwc9/sTeMRLiteU8jmT2tfDskgutQTuU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/index.css"
+    },
+    {
+      "Identity": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.html",
+      "SourceId": "DOA.Core",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/",
+      "BasePath": "_content/DOA.Core",
+      "RelativePath": "index#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "qzoq83hwfw",
+      "Integrity": "BgWna6oA8nxgYePser1GYvU7WVxbNIe+uKk1Kl2w2D0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/index.html"
+    },
+    {
+      "Identity": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.js",
+      "SourceId": "DOA.Core",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/",
+      "BasePath": "_content/DOA.Core",
+      "RelativePath": "index#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "e6zl0gokhk",
+      "Integrity": "qpq+3ceQHF6JRFtaua3LkyigX5dn4zvdXjBNNIIuCRU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/index.js"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "index.css",
+      "AssetFile": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/c34qr4d0og-z75ayla3fk.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001215066829"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "822"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"avOSOcHyCMQotube8oa6dNiSqNT6zxhc6IwMmvZwHKw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 30 Nov 2025 18:37:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"726eLM6zbapHwc9/sTeMRLiteU8jmT2tfDskgutQTuU=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-726eLM6zbapHwc9/sTeMRLiteU8jmT2tfDskgutQTuU="
+        }
+      ]
+    },
+    {
+      "Route": "index.css",
+      "AssetFile": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1835"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"726eLM6zbapHwc9/sTeMRLiteU8jmT2tfDskgutQTuU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 30 Nov 2025 18:37:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-726eLM6zbapHwc9/sTeMRLiteU8jmT2tfDskgutQTuU="
+        }
+      ]
+    },
+    {
+      "Route": "index.css.gz",
+      "AssetFile": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/c34qr4d0og-z75ayla3fk.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "822"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"avOSOcHyCMQotube8oa6dNiSqNT6zxhc6IwMmvZwHKw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 30 Nov 2025 18:37:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-avOSOcHyCMQotube8oa6dNiSqNT6zxhc6IwMmvZwHKw="
+        }
+      ]
+    },
+    {
+      "Route": "index.e6zl0gokhk.js",
+      "AssetFile": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/ny947uykfk-e6zl0gokhk.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000643915003"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1552"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KDxoeDvhYGP7WDH1sXtdZ+JfGgluZLs/f9CAjqQUP/E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 30 Nov 2025 18:37:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"qpq+3ceQHF6JRFtaua3LkyigX5dn4zvdXjBNNIIuCRU=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "e6zl0gokhk"
+        },
+        {
+          "Name": "label",
+          "Value": "index.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-qpq+3ceQHF6JRFtaua3LkyigX5dn4zvdXjBNNIIuCRU="
+        }
+      ]
+    },
+    {
+      "Route": "index.e6zl0gokhk.js",
+      "AssetFile": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3964"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qpq+3ceQHF6JRFtaua3LkyigX5dn4zvdXjBNNIIuCRU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 30 Nov 2025 18:37:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "e6zl0gokhk"
+        },
+        {
+          "Name": "label",
+          "Value": "index.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-qpq+3ceQHF6JRFtaua3LkyigX5dn4zvdXjBNNIIuCRU="
+        }
+      ]
+    },
+    {
+      "Route": "index.e6zl0gokhk.js.gz",
+      "AssetFile": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/ny947uykfk-e6zl0gokhk.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1552"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KDxoeDvhYGP7WDH1sXtdZ+JfGgluZLs/f9CAjqQUP/E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 30 Nov 2025 18:37:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "e6zl0gokhk"
+        },
+        {
+          "Name": "label",
+          "Value": "index.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KDxoeDvhYGP7WDH1sXtdZ+JfGgluZLs/f9CAjqQUP/E="
+        }
+      ]
+    },
+    {
+      "Route": "index.html",
+      "AssetFile": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/9erye4trlu-qzoq83hwfw.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.002544529262"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "392"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"map9Yx+q8waAJ2x6O56fYtVuXfVWX3I/+zPIg2Jo9oA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 30 Nov 2025 18:37:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"BgWna6oA8nxgYePser1GYvU7WVxbNIe+uKk1Kl2w2D0=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-BgWna6oA8nxgYePser1GYvU7WVxbNIe+uKk1Kl2w2D0="
+        }
+      ]
+    },
+    {
+      "Route": "index.html",
+      "AssetFile": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "717"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BgWna6oA8nxgYePser1GYvU7WVxbNIe+uKk1Kl2w2D0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 30 Nov 2025 18:37:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-BgWna6oA8nxgYePser1GYvU7WVxbNIe+uKk1Kl2w2D0="
+        }
+      ]
+    },
+    {
+      "Route": "index.html.gz",
+      "AssetFile": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/9erye4trlu-qzoq83hwfw.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "392"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"map9Yx+q8waAJ2x6O56fYtVuXfVWX3I/+zPIg2Jo9oA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 30 Nov 2025 18:37:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-map9Yx+q8waAJ2x6O56fYtVuXfVWX3I/+zPIg2Jo9oA="
+        }
+      ]
+    },
+    {
+      "Route": "index.js",
+      "AssetFile": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/ny947uykfk-e6zl0gokhk.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000643915003"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1552"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KDxoeDvhYGP7WDH1sXtdZ+JfGgluZLs/f9CAjqQUP/E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 30 Nov 2025 18:37:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"qpq+3ceQHF6JRFtaua3LkyigX5dn4zvdXjBNNIIuCRU=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-qpq+3ceQHF6JRFtaua3LkyigX5dn4zvdXjBNNIIuCRU="
+        }
+      ]
+    },
+    {
+      "Route": "index.js",
+      "AssetFile": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3964"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qpq+3ceQHF6JRFtaua3LkyigX5dn4zvdXjBNNIIuCRU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 30 Nov 2025 18:37:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-qpq+3ceQHF6JRFtaua3LkyigX5dn4zvdXjBNNIIuCRU="
+        }
+      ]
+    },
+    {
+      "Route": "index.js.gz",
+      "AssetFile": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/ny947uykfk-e6zl0gokhk.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1552"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KDxoeDvhYGP7WDH1sXtdZ+JfGgluZLs/f9CAjqQUP/E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 30 Nov 2025 18:37:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KDxoeDvhYGP7WDH1sXtdZ+JfGgluZLs/f9CAjqQUP/E="
+        }
+      ]
+    },
+    {
+      "Route": "index.qzoq83hwfw.html",
+      "AssetFile": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/9erye4trlu-qzoq83hwfw.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.002544529262"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "392"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"map9Yx+q8waAJ2x6O56fYtVuXfVWX3I/+zPIg2Jo9oA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 30 Nov 2025 18:37:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"BgWna6oA8nxgYePser1GYvU7WVxbNIe+uKk1Kl2w2D0=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qzoq83hwfw"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-BgWna6oA8nxgYePser1GYvU7WVxbNIe+uKk1Kl2w2D0="
+        }
+      ]
+    },
+    {
+      "Route": "index.qzoq83hwfw.html",
+      "AssetFile": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "717"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BgWna6oA8nxgYePser1GYvU7WVxbNIe+uKk1Kl2w2D0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 30 Nov 2025 18:37:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qzoq83hwfw"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-BgWna6oA8nxgYePser1GYvU7WVxbNIe+uKk1Kl2w2D0="
+        }
+      ]
+    },
+    {
+      "Route": "index.qzoq83hwfw.html.gz",
+      "AssetFile": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/9erye4trlu-qzoq83hwfw.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "392"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"map9Yx+q8waAJ2x6O56fYtVuXfVWX3I/+zPIg2Jo9oA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 30 Nov 2025 18:37:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qzoq83hwfw"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-map9Yx+q8waAJ2x6O56fYtVuXfVWX3I/+zPIg2Jo9oA="
+        }
+      ]
+    },
+    {
+      "Route": "index.z75ayla3fk.css",
+      "AssetFile": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/c34qr4d0og-z75ayla3fk.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001215066829"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "822"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"avOSOcHyCMQotube8oa6dNiSqNT6zxhc6IwMmvZwHKw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 30 Nov 2025 18:37:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"726eLM6zbapHwc9/sTeMRLiteU8jmT2tfDskgutQTuU=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "z75ayla3fk"
+        },
+        {
+          "Name": "label",
+          "Value": "index.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-726eLM6zbapHwc9/sTeMRLiteU8jmT2tfDskgutQTuU="
+        }
+      ]
+    },
+    {
+      "Route": "index.z75ayla3fk.css",
+      "AssetFile": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1835"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"726eLM6zbapHwc9/sTeMRLiteU8jmT2tfDskgutQTuU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 30 Nov 2025 18:37:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "z75ayla3fk"
+        },
+        {
+          "Name": "label",
+          "Value": "index.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-726eLM6zbapHwc9/sTeMRLiteU8jmT2tfDskgutQTuU="
+        }
+      ]
+    },
+    {
+      "Route": "index.z75ayla3fk.css.gz",
+      "AssetFile": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/c34qr4d0og-z75ayla3fk.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "822"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"avOSOcHyCMQotube8oa6dNiSqNT6zxhc6IwMmvZwHKw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 30 Nov 2025 18:37:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "z75ayla3fk"
+        },
+        {
+          "Name": "label",
+          "Value": "index.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-avOSOcHyCMQotube8oa6dNiSqNT6zxhc6IwMmvZwHKw="
+        }
+      ]
+    }
+  ]
 }

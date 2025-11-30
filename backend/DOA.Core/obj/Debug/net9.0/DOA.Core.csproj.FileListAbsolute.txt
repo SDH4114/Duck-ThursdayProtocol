@@ -28,3 +28,7 @@
 /Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/DOA.Core.genruntimeconfig.cache
 /Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/ref/DOA.Core.dll
 /Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/bin/Debug/net9.0/Config/doa.config.json
+/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/bin/Debug/net9.0/DOA.Core.staticwebassets.runtime.json
+/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/c34qr4d0og-z75ayla3fk.gz
+/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/9erye4trlu-qzoq83hwfw.gz
+/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/ny947uykfk-e6zl0gokhk.gz
