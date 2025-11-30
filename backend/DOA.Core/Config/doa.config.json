@@ -1,0 +1,12 @@
+{
+  "theme": "neon-green",
+  "notesPath": "~/DOA/notes",
+  "logsPath": "~/DOA/logs",
+  "shell": {
+    "defaultPrompt": "DOA::",
+    "fontSize": 14
+  },
+  "system": {
+    "startupMessage": "DOA Core initialized. Control restored."
+  }
+}
