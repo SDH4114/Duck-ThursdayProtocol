@@ -1441,11 +1441,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/DOA.Desktop/DOA.Desktop.csproj",
+      "projectUniqueName": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/DOA.Desktop/DOA.Desktop.csproj",
       "projectName": "DOA.Desktop",
-      "projectPath": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/DOA.Desktop/DOA.Desktop.csproj",
+      "projectPath": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/DOA.Desktop/DOA.Desktop.csproj",
       "packagesPath": "/Users/aminmammadov/.nuget/packages/",
-      "outputPath": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/DOA.Desktop/obj/",
+      "outputPath": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/DOA.Desktop/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/aminmammadov/.nuget/NuGet/NuGet.Config"
@@ -1460,8 +1460,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/DOA.Core.csproj": {
-              "projectPath": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/DOA.Core.csproj"
+            "/Users/aminmammadov/giti/Duck-Of-Apocalypse/backend/DOA.Core/DOA.Core.csproj": {
+              "projectPath": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/backend/DOA.Core/DOA.Core.csproj"
             }
           }
         }

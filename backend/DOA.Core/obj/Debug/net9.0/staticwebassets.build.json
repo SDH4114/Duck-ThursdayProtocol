@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fGbyOfv/92KROhwkDZHBkabpfp7EOG/Th3dPoBkJME8=",
+  "Hash": "w4lwYFMyxtWcTOuy1+Afn5n+Frp/qTH9k1Yr9rhcB2A=",
   "Source": "DOA.Core",
   "BasePath": "_content/DOA.Core",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "DOA.Core/wwwroot",
       "Source": "DOA.Core",
-      "ContentRoot": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/",
+      "ContentRoot": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/",
       "BasePath": "_content/DOA.Core",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/9erye4trlu-qzoq83hwfw.gz",
+      "Identity": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/9erye4trlu-qzoq83hwfw.gz",
       "SourceId": "DOA.Core",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/",
+      "ContentRoot": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/",
       "BasePath": "_content/DOA.Core",
       "RelativePath": "index#[.{fingerprint=qzoq83hwfw}]?.html.gz",
       "AssetKind": "All",
@@ -28,20 +28,20 @@
       "AssetRole": "Alternative",
       "AssetMergeBehavior": "",
       "AssetMergeSource": "",
-      "RelatedAsset": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.html",
+      "RelatedAsset": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.html",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
       "Fingerprint": "jd41h2djav",
       "Integrity": "map9Yx+q8waAJ2x6O56fYtVuXfVWX3I/+zPIg2Jo9oA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.html"
+      "OriginalItemSpec": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.html"
     },
     {
-      "Identity": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/c34qr4d0og-z75ayla3fk.gz",
+      "Identity": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/c34qr4d0og-z75ayla3fk.gz",
       "SourceId": "DOA.Core",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/",
+      "ContentRoot": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/",
       "BasePath": "_content/DOA.Core",
       "RelativePath": "index#[.{fingerprint=z75ayla3fk}]?.css.gz",
       "AssetKind": "All",
@@ -49,20 +49,20 @@
       "AssetRole": "Alternative",
       "AssetMergeBehavior": "",
       "AssetMergeSource": "",
-      "RelatedAsset": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.css",
+      "RelatedAsset": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
       "Fingerprint": "y6vazdewh5",
       "Integrity": "avOSOcHyCMQotube8oa6dNiSqNT6zxhc6IwMmvZwHKw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.css"
+      "OriginalItemSpec": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.css"
     },
     {
-      "Identity": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/ny947uykfk-e6zl0gokhk.gz",
+      "Identity": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/ny947uykfk-e6zl0gokhk.gz",
       "SourceId": "DOA.Core",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/",
+      "ContentRoot": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/",
       "BasePath": "_content/DOA.Core",
       "RelativePath": "index#[.{fingerprint=e6zl0gokhk}]?.js.gz",
       "AssetKind": "All",
@@ -70,20 +70,20 @@
       "AssetRole": "Alternative",
       "AssetMergeBehavior": "",
       "AssetMergeSource": "",
-      "RelatedAsset": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.js",
+      "RelatedAsset": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.js",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
       "Fingerprint": "osdgyyjrcc",
       "Integrity": "KDxoeDvhYGP7WDH1sXtdZ+JfGgluZLs/f9CAjqQUP/E=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.js"
+      "OriginalItemSpec": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.js"
     },
     {
-      "Identity": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.css",
+      "Identity": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.css",
       "SourceId": "DOA.Core",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/",
+      "ContentRoot": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/",
       "BasePath": "_content/DOA.Core",
       "RelativePath": "index#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -101,10 +101,10 @@
       "OriginalItemSpec": "wwwroot/index.css"
     },
     {
-      "Identity": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.html",
+      "Identity": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.html",
       "SourceId": "DOA.Core",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/",
+      "ContentRoot": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/",
       "BasePath": "_content/DOA.Core",
       "RelativePath": "index#[.{fingerprint}]?.html",
       "AssetKind": "All",
@@ -122,10 +122,10 @@
       "OriginalItemSpec": "wwwroot/index.html"
     },
     {
-      "Identity": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.js",
+      "Identity": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.js",
       "SourceId": "DOA.Core",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/",
+      "ContentRoot": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/",
       "BasePath": "_content/DOA.Core",
       "RelativePath": "index#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -146,7 +146,7 @@
   "Endpoints": [
     {
       "Route": "index.css",
-      "AssetFile": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/c34qr4d0og-z75ayla3fk.gz",
+      "AssetFile": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/c34qr4d0og-z75ayla3fk.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -201,7 +201,7 @@
     },
     {
       "Route": "index.css",
-      "AssetFile": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.css",
+      "AssetFile": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -238,7 +238,7 @@
     },
     {
       "Route": "index.css.gz",
-      "AssetFile": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/c34qr4d0og-z75ayla3fk.gz",
+      "AssetFile": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/c34qr4d0og-z75ayla3fk.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -283,7 +283,7 @@
     },
     {
       "Route": "index.e6zl0gokhk.js",
-      "AssetFile": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/ny947uykfk-e6zl0gokhk.gz",
+      "AssetFile": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/ny947uykfk-e6zl0gokhk.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -346,7 +346,7 @@
     },
     {
       "Route": "index.e6zl0gokhk.js",
-      "AssetFile": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.js",
+      "AssetFile": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -391,7 +391,7 @@
     },
     {
       "Route": "index.e6zl0gokhk.js.gz",
-      "AssetFile": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/ny947uykfk-e6zl0gokhk.gz",
+      "AssetFile": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/ny947uykfk-e6zl0gokhk.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -444,7 +444,7 @@
     },
     {
       "Route": "index.html",
-      "AssetFile": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/9erye4trlu-qzoq83hwfw.gz",
+      "AssetFile": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/9erye4trlu-qzoq83hwfw.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -499,7 +499,7 @@
     },
     {
       "Route": "index.html",
-      "AssetFile": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.html",
+      "AssetFile": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -536,7 +536,7 @@
     },
     {
       "Route": "index.html.gz",
-      "AssetFile": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/9erye4trlu-qzoq83hwfw.gz",
+      "AssetFile": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/9erye4trlu-qzoq83hwfw.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -581,7 +581,7 @@
     },
     {
       "Route": "index.js",
-      "AssetFile": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/ny947uykfk-e6zl0gokhk.gz",
+      "AssetFile": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/ny947uykfk-e6zl0gokhk.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -636,7 +636,7 @@
     },
     {
       "Route": "index.js",
-      "AssetFile": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.js",
+      "AssetFile": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -673,7 +673,7 @@
     },
     {
       "Route": "index.js.gz",
-      "AssetFile": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/ny947uykfk-e6zl0gokhk.gz",
+      "AssetFile": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/ny947uykfk-e6zl0gokhk.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -718,7 +718,7 @@
     },
     {
       "Route": "index.qzoq83hwfw.html",
-      "AssetFile": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/9erye4trlu-qzoq83hwfw.gz",
+      "AssetFile": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/9erye4trlu-qzoq83hwfw.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -781,7 +781,7 @@
     },
     {
       "Route": "index.qzoq83hwfw.html",
-      "AssetFile": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.html",
+      "AssetFile": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -826,7 +826,7 @@
     },
     {
       "Route": "index.qzoq83hwfw.html.gz",
-      "AssetFile": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/9erye4trlu-qzoq83hwfw.gz",
+      "AssetFile": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/9erye4trlu-qzoq83hwfw.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -879,7 +879,7 @@
     },
     {
       "Route": "index.z75ayla3fk.css",
-      "AssetFile": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/c34qr4d0og-z75ayla3fk.gz",
+      "AssetFile": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/c34qr4d0og-z75ayla3fk.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -942,7 +942,7 @@
     },
     {
       "Route": "index.z75ayla3fk.css",
-      "AssetFile": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.css",
+      "AssetFile": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -987,7 +987,7 @@
     },
     {
       "Route": "index.z75ayla3fk.css.gz",
-      "AssetFile": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/c34qr4d0og-z75ayla3fk.gz",
+      "AssetFile": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/Debug/net9.0/compressed/c34qr4d0og-z75ayla3fk.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {

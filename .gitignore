@@ -60,3 +60,103 @@ __pycache__/
 *.iml
 *.log
 *.lock
+
+## ---------------------------
+## .NET / C# Build Artifacts
+## ---------------------------
+
+bin/
+obj/
+*/bin/
+*/obj/
+**/bin/
+**/obj/
+
+# Publish folders
+publish/
+*/publish/
+**/publish/
+
+# Avalonia build cache
+*.axaml.cs~
+*.xaml.cs~
+*.g.cs
+*.g.i.cs
+*.g.i.axaml.cs
+*.g.axaml.cs
+*.css.bin
+
+# Avalonia.Desktop temp
+.nuget/
+packages/
+# Avalonia compiled resources
+*.assets.cache
+*.resources.cache
+
+## ---------------------------
+## IDE / Editor Files
+## ---------------------------
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# Visual Studio
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# MacOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+*~
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+## ---------------------------
+## Logs / Temp
+## ---------------------------
+
+*.log
+*.tmp
+*.temp
+logs/
+*/logs/
+
+## ---------------------------
+## Cache / Runtime data
+## ---------------------------
+
+dotnet-tools.json
+*.pidb
+*.dbmdl
+*.pdb
+*.cache
+*.config
+
+## ---------------------------
+## Your DOA Project Exclusions
+## ---------------------------
+
+# Local configs you don't want in repo
+DOA.Core/configs/*.json
+DOA.Core/configs/*.tmp
+
+# If user-generated notes should not be tracked
+notes/
+*/notes/
+
+# If you generate icons dynamically
+DOA.Desktop/Assets/temp/

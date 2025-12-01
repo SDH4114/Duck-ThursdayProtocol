@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "i3ct+JnyXb8=",
+  "dgSpecHash": "6x1S2shrwl0=",
   "success": true,
-  "projectFilePath": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/DOA.Desktop/DOA.Desktop.csproj",
+  "projectFilePath": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/DOA.Desktop/DOA.Desktop.csproj",
   "expectedPackageFiles": [
     "/Users/aminmammadov/.nuget/packages/avalonia/11.3.9/avalonia.11.3.9.nupkg.sha512",
     "/Users/aminmammadov/.nuget/packages/avalonia.angle.windows.natives/2.1.25547.20250602/avalonia.angle.windows.natives.2.1.25547.20250602.nupkg.sha512",

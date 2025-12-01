@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/DOA.Core.csproj",
+      "projectUniqueName": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/backend/DOA.Core/DOA.Core.csproj",
       "projectName": "DOA.Core",
-      "projectPath": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/DOA.Core.csproj",
+      "projectPath": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/backend/DOA.Core/DOA.Core.csproj",
       "packagesPath": "/Users/aminmammadov/.nuget/packages/",
-      "outputPath": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/",
+      "outputPath": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/backend/DOA.Core/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/aminmammadov/.nuget/NuGet/NuGet.Config"

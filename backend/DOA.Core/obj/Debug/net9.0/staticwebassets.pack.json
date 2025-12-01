@@ -1,15 +1,15 @@
 {
   "Files": [
     {
-      "Id": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.css",
+      "Id": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.css",
       "PackagePath": "staticwebassets/index.css"
     },
     {
-      "Id": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.html",
+      "Id": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.html",
       "PackagePath": "staticwebassets/index.html"
     },
     {
-      "Id": "/Users/aminmammadov/Giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.js",
+      "Id": "/Users/aminmammadov/giti/Duck-Of-Apocalypse/backend/DOA.Core/wwwroot/index.js",
       "PackagePath": "staticwebassets/index.js"
     },
     {
