@@ -22,5 +22,5 @@ app.MapPost("/command", (CommandRequest request, CommandDispatcher dispatcher) =
     return Results.Json(response);
 });
 
-// потом сделать приложение и блаб ла бла
+// потом сделать приложение и блаб ла бла и еше раз бла бла бла
 app.Run("http://localhost:7070");
