@@ -1,0 +1,55 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="DOA.Desktop.MainWindow"
+        Icon="avares://DOA.Desktop/Assets/appicon.ico"
+        Width="1280" Height="720"
+        Background="#1A1A1A"
+        Title="D.O.A. — Duck Of Apocalypse Terminal">
+  <Grid RowDefinitions="*,Auto"
+        Margin="24">
+
+    <!-- Область вывода терминала -->
+    <Border Grid.Row="0"
+            Background="#1E1E1E"
+            BorderBrush="#3E3E42"
+            BorderThickness="0"
+            Padding="14,12">
+      <ScrollViewer VerticalScrollBarVisibility="Auto"
+                    HorizontalScrollBarVisibility="Disabled">
+        <!-- Каждая строка вывода будет отдельным TextBlock -->
+        <StackPanel x:Name="ConsolePanel"
+                    Orientation="Vertical" />
+      </ScrollViewer>
+    </Border>
+
+    <!-- Строка ввода команд -->
+    <Border Grid.Row="1"
+            Background="#1E1E1E"
+            BorderThickness="1"
+            CornerRadius="3"
+            Padding="6,3">
+      <Grid ColumnDefinitions="Auto,*">
+        <!-- Промпт -->
+        <TextBlock Grid.Column="0"
+                   Text=">"
+                   Foreground="#D4D4D4"
+                   FontFamily="SF Mono, Consolas, Monaco, Courier New, monospace"
+                   FontSize="12"
+                   Margin="0,0,8,0"
+                   VerticalAlignment="Center"/>
+
+        <!-- Поле ввода -->
+        <TextBox x:Name="InputBox"
+                 Grid.Column="1"
+                 Background="Transparent"
+                 BorderThickness="0"
+                 Foreground="#D4D4D4"
+                 FontFamily="SF Mono, Consolas, Monaco, Courier New, monospace"
+                 FontSize="12"
+                 CaretBrush="#89d185"
+                 VerticalAlignment="Center"
+                 Padding="0"/>
+      </Grid>
+    </Border>
+  </Grid>
+</Window>
