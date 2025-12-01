@@ -1,10 +1,11 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Text;
+using System.Timers;
 using Avalonia.Controls;
 using Avalonia.Input;
 using Avalonia.Media;
+using Avalonia.Threading;
 using DOA.Core.Models;
 using DOA.Core.Services;
 
@@ -17,184 +18,244 @@ public partial class MainWindow : Window
     private readonly List<string> _history = new();
     private int _historyIndex = -1;
 
+    private TextBlock? _inputLine;
+    private string _currentInput = string.Empty;
+    private int _caretIndex = 0;
+
+    private bool _cursorVisible = true;
+    private readonly Timer _cursorTimer;
+
     public MainWindow()
     {
         InitializeComponent();
 
+        // Инициализируем ядро DOA
         var pathService = new PathService();
         var noteService = new NoteService(pathService);
         var shellService = new ShellService();
         var systemService = new SystemService();
-
         _dispatcher = new CommandDispatcher(noteService, shellService, systemService);
 
-        InputBox.KeyDown += InputBoxOnKeyDown;
+        // Ловим клавиши и текст
+        this.KeyDown += OnKeyDown;
+        this.TextInput += OnTextInput;
 
-        AppendOutputBlock("DOA Core desktop online. Type 'help' for commands.");
-
-        this.Opened += (_, _) => InputBox.Focus();
-    }
-
-    // ===================== РЕНДЕР СТРОК ======================
-
-    /// <summary>
-    /// Эхо команды пользователя: "> something" (белый, без D.O.A.)
-    /// </summary>
-    private void AppendCommandEcho(string text)
-    {
-        var line = new TextBlock
+        // Таймер мигания курсора
+        _cursorTimer = new Timer(500);
+        _cursorTimer.Elapsed += (_, _) =>
         {
-            Text = $"> {text}",
-            Foreground = Brushes.White,
-            FontFamily = new FontFamily("SF Mono, Consolas, Monaco, Courier New, monospace"),
-            FontSize = 13
+            _cursorVisible = !_cursorVisible;
+            Dispatcher.UIThread.InvokeAsync(RenderInputLine);
         };
-        ConsolePanel.Children.Add(line);
+        _cursorTimer.Start();
+
+        AppendOutputBlock("DOA Desktop Terminal online. Type 'help'.");
+
+        CreateInputLine();
+
+        this.Opened += (_, _) => this.Focus();
+        this.PointerPressed += (_, _) => this.Focus();
     }
 
-    /// <summary>
-    /// Блок обычного вывода: первая строка "D.O.A.> ...", остальные просто с отступом.
-    /// </summary>
-    private void AppendOutputBlock(string text)
+    // ========================= INPUT LINE =========================
+
+    private void CreateInputLine()
     {
-        if (string.IsNullOrEmpty(text))
+        _currentInput = string.Empty;
+        _caretIndex = 0;
+
+        _inputLine = new TextBlock
+        {
+            FontFamily = new FontFamily("SF Mono, Consolas, Monaco, Courier New, monospace"),
+            FontSize = 14,
+            Foreground = Brushes.White
+        };
+
+        ConsolePanel.Children.Add(_inputLine);
+        RenderInputLine();
+    }
+
+    private void RenderInputLine()
+    {
+        if (_inputLine == null)
             return;
 
-        var lines = text.Replace("\r\n", "\n").Split('\n');
-        for (int i = 0; i < lines.Length; i++)
-        {
-            var lineText = lines[i];
-            string display;
+        if (_caretIndex < 0) _caretIndex = 0;
+        if (_caretIndex > _currentInput.Length) _caretIndex = _currentInput.Length;
 
-            if (i == 0)
-                display = $"D.O.A.> {lineText}";
-            else
-                display = $"         {lineText}"; // 9 пробелов под "D.O.A.>"
+        var left = _currentInput.Substring(0, _caretIndex);
+        var right = _currentInput.Substring(_caretIndex);
 
-            var tb = new TextBlock
-            {
-                Text = display,
-                Foreground = new SolidColorBrush(Color.Parse("#89d185")),
-                FontFamily = new FontFamily("SF Mono, Consolas, Monaco, Courier New, monospace"),
-                FontSize = 13
-            };
-            ConsolePanel.Children.Add(tb);
-        }
+        // ❗ Делаем тонкий курсор БЕЗ пробела
+        var cursorChar = _cursorVisible ? "|" : "";
+
+        _inputLine.Text = $"> {left}{cursorChar}{right}";
     }
 
-    /// <summary>
-    /// Блок ошибок: первая строка "D.O.A.> ...", остальные с отступом, красным.
-    /// </summary>
-    private void AppendErrorBlock(string text)
+    // ========================= ВВОД СИМВОЛОВ =========================
+
+    private void OnTextInput(object? sender, TextInputEventArgs e)
     {
-        if (string.IsNullOrEmpty(text))
+        if (string.IsNullOrEmpty(e.Text))
             return;
 
-        var lines = text.Replace("\r\n", "\n").Split('\n');
-        for (int i = 0; i < lines.Length; i++)
+        // Вставка текста в позицию курсора
+        _currentInput = _currentInput.Insert(_caretIndex, e.Text);
+        _caretIndex += e.Text.Length;
+
+        RenderInputLine();
+        e.Handled = true;
+    }
+
+    // ========================= КЛАВИШИ (ENTER, СТРЕЛКИ и т.п.) =========================
+
+    private void OnKeyDown(object? sender, KeyEventArgs e)
+    {
+        switch (e.Key)
         {
-            var lineText = lines[i];
-            string display;
+            case Key.Enter:
+                ExecuteCommand(_currentInput);
+                e.Handled = true;
+                break;
 
-            if (i == 0)
-                display = $"D.O.A.> {lineText}";
-            else
-                display = $"         {lineText}";
+            case Key.Back:
+                if (_caretIndex > 0 && _currentInput.Length > 0)
+                {
+                    _currentInput = _currentInput.Remove(_caretIndex - 1, 1);
+                    _caretIndex--;
+                    RenderInputLine();
+                }
+                e.Handled = true;
+                break;
 
-            var tb = new TextBlock
-            {
-                Text = display,
-                Foreground = new SolidColorBrush(Color.Parse("#F48771")),
-                FontFamily = new FontFamily("SF Mono, Consolas, Monaco, Courier New, monospace"),
-                FontSize = 13
-            };
-            ConsolePanel.Children.Add(tb);
+            case Key.Delete:
+                if (_caretIndex < _currentInput.Length && _currentInput.Length > 0)
+                {
+                    _currentInput = _currentInput.Remove(_caretIndex, 1);
+                    RenderInputLine();
+                }
+                e.Handled = true;
+                break;
+
+            case Key.Left:
+                if (_caretIndex > 0)
+                {
+                    _caretIndex--;
+                    RenderInputLine();
+                }
+                e.Handled = true;
+                break;
+
+            case Key.Right:
+                if (_caretIndex < _currentInput.Length)
+                {
+                    _caretIndex++;
+                    RenderInputLine();
+                }
+                e.Handled = true;
+                break;
+
+            case Key.Home:
+                _caretIndex = 0;
+                RenderInputLine();
+                e.Handled = true;
+                break;
+
+            case Key.End:
+                _caretIndex = _currentInput.Length;
+                RenderInputLine();
+                e.Handled = true;
+                break;
+
+            case Key.Up:
+                if (_history.Count > 0)
+                {
+                    if (_historyIndex < _history.Count - 1)
+                        _historyIndex++;
+
+                    _currentInput = _history[_historyIndex];
+                    _caretIndex = _currentInput.Length;
+                    RenderInputLine();
+                }
+                e.Handled = true;
+                break;
+
+            case Key.Down:
+                if (_historyIndex > 0)
+                {
+                    _historyIndex--;
+                    _currentInput = _history[_historyIndex];
+                }
+                else
+                {
+                    _historyIndex = -1;
+                    _currentInput = string.Empty;
+                }
+                _caretIndex = _currentInput.Length;
+                RenderInputLine();
+                e.Handled = true;
+                break;
         }
     }
 
-    // ===================== ОБРАБОТКА ВВОДА ======================
+    // ========================= ВЫПОЛНЕНИЕ КОМАНДЫ =========================
 
-    private void InputBoxOnKeyDown(object? sender, KeyEventArgs e)
+    private void ExecuteCommand(string cmd)
     {
-        if (e.Key == Key.Enter)
+        // Фиксируем текущую строку как обычную (без курсора)
+        var frozen = cmd;
+        if (_inputLine != null)
         {
-            var raw = InputBox.Text ?? string.Empty;
-            InputBox.Text = string.Empty;
-
-            if (string.IsNullOrWhiteSpace(raw))
-                return;
-
-            _history.Insert(0, raw);
-            _historyIndex = -1;
-
-            AppendCommandEcho(raw);
-            HandleCommand(raw);
-
-            e.Handled = true;
+            _inputLine.Text = $"> {frozen}";
         }
-        else if (e.Key == Key.Up)
+
+        var trimmed = cmd.Trim();
+
+        // Пустая строка — просто новый промпт
+        if (string.IsNullOrWhiteSpace(trimmed))
         {
-            if (_history.Count == 0) return;
-            if (_historyIndex < _history.Count - 1)
-                _historyIndex++;
-
-            InputBox.Text = _history[_historyIndex];
-            InputBox.CaretIndex = InputBox.Text!.Length;
-            e.Handled = true;
+            CreateInputLine();
+            return;
         }
-        else if (e.Key == Key.Down)
-        {
-            if (_historyIndex > 0)
-            {
-                _historyIndex--;
-                InputBox.Text = _history[_historyIndex];
-            }
-            else
-            {
-                _historyIndex = -1;
-                InputBox.Text = string.Empty;
-            }
 
-            InputBox.CaretIndex = InputBox.Text!.Length;
-            e.Handled = true;
-        }
-    }
+        // История
+        _history.Insert(0, cmd);
+        _historyIndex = -1;
 
-    // ===================== ЛОГИКА КОМАНД ======================
-
-    private void HandleCommand(string raw)
-    {
-        var trimmed = raw.Trim();
-
+        // clear
         if (trimmed == "clear")
         {
             ConsolePanel.Children.Clear();
+            CreateInputLine();
             return;
         }
 
+        // help
         if (trimmed == "help")
         {
-            var helpText = new StringBuilder();
-            helpText.AppendLine("Commands:");
-            helpText.AppendLine("  system.info");
-            helpText.AppendLine("  system.time");
-            helpText.AppendLine("  note.new \"Title\" text");
-            helpText.AppendLine("  note.list");
-            helpText.AppendLine("  ls / pwd / git status");
-            helpText.Append("  clear");
-            AppendOutputBlock(helpText.ToString());
+            AppendOutputBlock(
+                "Commands:\n" +
+                "  system.info\n" +
+                "  system.time\n" +
+                "  note.new \"Title\" text\n" +
+                "  note.list\n" +
+                "  ls / pwd / git status\n" +
+                "  clear"
+            );
+            CreateInputLine();
             return;
         }
 
+        // Вызов ядра
         CommandResponse response;
-
         try
         {
-            response = _dispatcher.Dispatch(new CommandRequest { Raw = raw });
+            response = _dispatcher.Dispatch(new CommandRequest { Raw = cmd });
         }
         catch (Exception ex)
         {
             AppendErrorBlock("Internal error: " + ex.Message);
+            CreateInputLine();
             return;
         }
 
@@ -206,13 +267,67 @@ public partial class MainWindow : Window
         else
             AppendErrorBlock($"[{status}] {message}");
 
-        if (response.Data is null)
-            return;
+        if (response.Data is not null)
+        {
+            RenderData(response.Data);
+        }
 
-        RenderData(response.Data);
+        // ❗ ВАЖНО: новый промпт ВСЕГДА после ответа:
+        // > comand
+        // D.O.A.> answer
+        // > _
+        CreateInputLine();
     }
 
-    // ===================== ОТРИСОВКА DATA ======================
+    // ========================= ВЫВОД БЛОКОВ =========================
+
+    private void AppendOutputBlock(string text)
+    {
+        if (string.IsNullOrEmpty(text))
+            return;
+
+        var lines = text.Replace("\r\n", "\n").Split('\n');
+
+        for (int i = 0; i < lines.Length; i++)
+        {
+            var display = i == 0
+                ? $"D.O.A.> {lines[i]}"
+                : $"         {lines[i]}";
+
+            ConsolePanel.Children.Add(new TextBlock
+            {
+                Text = display,
+                Foreground = new SolidColorBrush(Color.Parse("#89d185")),
+                FontFamily = new FontFamily("SF Mono, Consolas, Monaco, Courier New, monospace"),
+                FontSize = 14
+            });
+        }
+    }
+
+    private void AppendErrorBlock(string text)
+    {
+        if (string.IsNullOrEmpty(text))
+            return;
+
+        var lines = text.Replace("\r\n", "\n").Split('\n');
+
+        for (int i = 0; i < lines.Length; i++)
+        {
+            var display = i == 0
+                ? $"D.O.A.> {lines[i]}"
+                : $"         {lines[i]}";
+
+            ConsolePanel.Children.Add(new TextBlock
+            {
+                Text = display,
+                Foreground = new SolidColorBrush(Color.Parse("#F48771")),
+                FontFamily = new FontFamily("SF Mono, Consolas, Monaco, Courier New, monospace"),
+                FontSize = 14
+            });
+        }
+    }
+
+    // ========================= ОТРИСОВКА DATA =========================
 
     private void RenderData(object data)
     {
@@ -241,12 +356,11 @@ public partial class MainWindow : Window
             var sb = new StringBuilder();
             foreach (var item in list)
                 sb.AppendLine(item);
-
             AppendOutputBlock(sb.ToString().TrimEnd());
             return;
         }
 
-        // заметка Title+Content
+        // заметка Title + Content
         var titleProp = type.GetProperty("Title");
         var contentProp = type.GetProperty("Content");
 
