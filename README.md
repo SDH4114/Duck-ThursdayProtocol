@@ -1,64 +1,94 @@
-# 🦆 Duck
+# Duck Of Apocalypse 🦆
 
-One-file AI workflow automation for macOS.
+**Duck Of Apocalypse** — это мощная утилита для автоматизации рабочего процесса с ИИ-агентами на macOS. Она позволяет мгновенно запускать терминальные сессии, переходить в рабочие директории и активировать голосовой ввод одной горячей клавишей.
 
-## Quick Start
+Программа предоставляет удобный терминальный интерфейс (TUI) для настройки и может быть интегрирована в систему через Hammerspoon.
 
-**Double-click `Duck`** — that's it!
+---
 
-## Build From Source
+## 🚀 Основные возможности
+
+*   **Быстрый старт**: Мгновенный запуск терминала (Terminal, Ghostty, iTerm, Warp и др.) в нужной папке.
+*   **ИИ-Агенты**: Автоматический запуск команды вашего ИИ-агента (например, `gemini`, `claude`, `chatgpt`) при старте.
+*   **Голосовой ввод**: (Опционально) Автоматическая активация диктовки macOS для общения с агентом голосом.
+*   **TUI Конфигурация**: Удобное меню настройки прямо в терминале.
+*   **Портативность**: Собирается в один исполняемый файл.
+
+---
+
+## 🛠 Установка и Сборка
+
+### Требования
+*   macOS
+*   Python 3.8+
+
+### 1. Сборка проекта
+
+Самый простой способ собрать проект в единый исполняемый файл — использовать встроенный скрипт:
 
 ```bash
-# Install PyInstaller
-pip3 install pyinstaller
+# 1. Установите зависимости
+pip3 install -r requirements.txt
 
-# Build single-file executable
-pyinstaller --onefile --name Duck duck.py
-
-# Result: dist/Duck
+# 2. Запустите скрипт сборки
+./build_portable.sh
 ```
 
-## Usage
+После успешной сборки готовый файл будет находиться по пути: `dist/Duck`. Этот файл полностью автономен, его можно перемещать куда угодно.
 
-### Double-click Duck
-Opens Terminal with interactive menu:
-```
-==================================================
-          🦆  D U C K
-      AI Workflow Automation
-==================================================
+---
 
-  [1]  Trigger Duck
-  [2]  Settings
-  [3]  Hammerspoon Hotkey
-  [4]  Exit
+## ⚙️ Настройка и Использование
+
+### Запуск меню настроек
+Запустите программу без аргументов (или просто откройте собранный файл), чтобы попасть в интерактивное меню настроек:
+
+```bash
+./dist/Duck
 ```
 
-### Hammerspoon Hotkey
-1. Run Duck, select [3]
-2. Copy the Lua snippet
-3. Paste into `~/.hammerspoon/init.lua`
-4. Reload Hammerspoon
-5. Press **Cmd+Alt+L** to trigger Duck headlessly
+В меню "Settings" вы можете указать:
+*   **Target Directory**: Папка, в которой будет открываться терминал (по умолчанию `~/desktop`).
+*   **Terminal App**: Ваш любимый терминал (Terminal, Ghostty, iTerm и т.д.).
+*   **Agent Command**: Команда для запуска ИИ (например, `AI`, `ollama run llama3`, `gh copilot`).
+*   **Voice Key**: Клавиша для активации диктовки (по умолчанию F5).
 
-## Data Location
+Настройки сохраняются в `~/.config/duck/config.json`.
 
-All settings stored in:
+---
+
+## 🎹 Интеграция с Hammerspoon
+
+Для максимальной продуктивности рекомендуется настроить глобальную горячую клавишу через [Hammerspoon](https://www.hammerspoon.org/).
+
+Добавьте следующий код в ваш `~/.hammerspoon/init.lua`. Это позволит вызывать Duck из любого места системы комбинацией `Cmd + Alt + L`.
+
+```lua
+-- Путь к вашему Python скрипту или собранному приложению
+local duckPath = os.getenv("HOME") .. "/giti/Duck-Of-Apocalypse/duck.py"
+-- Или если используете собранный файл:
+-- local duckPath = os.getenv("HOME") .. "/giti/Duck-Of-Apocalypse/dist/Duck"
+
+hs.hotkey.bind({"cmd", "ctrl"}, "L", function()
+    -- Открываем Ghostty (или другой терминал) и передаем команду trigger
+    -- 'python3' нужен, если вы запускаете .py файл. Для бинарника просто укажите путь.
+    local cmd = string.format("open -a Ghostty --args -e python3 '%s' trigger", duckPath)
+    hs.execute(cmd)
+end)
 ```
-~/Desktop/duckinfo/
-├── config.json    # Settings
-└── times/         # Run logs
-```
 
-## Gatekeeper (First Run)
+**Примечание:** Команда `trigger` запускает Duck в режиме немедленного выполнения действий (открыть терминал -> перейти в папку -> запустить агента), пропуская главное меню.
 
-If macOS blocks the app:
-1. Right-click Duck → Open
-2. Click "Open" in the dialog
-3. Only needed once
+---
 
-## Send to Friend
+## 📂 Структура проекта
 
-Just send them **one file**: `Duck`
+*   `duck.py` / `duck_portable.py`: Основной код приложения.
+*   `automation_mac.py`: Модуль автоматизации (AppleScript) для управления окнами и эмуляции нажатий.
+*   `config.py`: Управление конфигурацией.
+*   `build_portable.sh`: Скрипт для компиляции проекта через PyInstaller.
 
-They double-click it. Done.
+---
+
+## 📝 Лицензия
+MIT

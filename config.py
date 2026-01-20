@@ -21,10 +21,11 @@ CONFIG_FILE = get_config_dir() / "config.json"
 
 @dataclass
 class LauncherConfig:
-    target_directory: str = "~"
+    target_directory: str = "~/desktop"
     terminal_app: str = "Terminal"
-    agent_command: str = "gemini"
+    agent_command: str = "AI"
     voice_key: str = "F5"
+    hotkey: str = "cmd+control+l"
     
     def get_expanded_directory(self) -> str:
         return os.path.expanduser(self.target_directory)
@@ -36,10 +37,6 @@ def load_config() -> LauncherConfig:
         try:
             with open(CONFIG_FILE, "r") as f:
                 data = json.load(f)
-            # Handle old configs without voice_key
-            if "hotkey" in data and "voice_key" not in data:
-                data["voice_key"] = "F5"
-                del data["hotkey"]
             return LauncherConfig(**data)
         except (json.JSONDecodeError, TypeError) as e:
             print(f"Config error: {e}")

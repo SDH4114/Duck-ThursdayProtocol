@@ -1,6 +1,6 @@
 {
-  "target_directory": "~/aiwork",
-  "terminal_app": "Ghostty",
-  "agent_command": "gemini",
-  "hotkey": "cmd+l"
+  "target_directory": "~/desktop",
+  "terminal_app": "Terminal",
+  "agent_command": "AI",
+  "hotkey": "cmd+control+l"
 }
