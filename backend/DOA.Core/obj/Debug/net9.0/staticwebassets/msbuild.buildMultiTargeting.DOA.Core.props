@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="../build/DOA.Core.props" />
-</Project>

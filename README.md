@@ -1,383 +1,64 @@
-# DuckTerm (Electron)
+# 🦆 Duck
 
-## Запуск
+One-file AI workflow automation for macOS.
+
+## Quick Start
+
+**Double-click `Duck`** — that's it!
+
+## Build From Source
+
 ```bash
-npm install
-npm run start
-
-🧩 DOA: Duck Of Apocalypse — System Command Specification (без AI)
-
-💻 Утилита `duck`
-- Запуск из исходников: `GOCACHE="$PWD/.gocache" GOMODCACHE="$PWD/.gomodcache" go run ./cmd/duck <command>`.
-- Поддерживается `DOA_HOME=/abs/path` для выбора каталога с конфигурацией и логами. По умолчанию данные хранятся в `.doa/` рядом с бинарником.
-- История команд записывается в `<DOA_HOME>/logs/session.log`, настройки — в `<DOA_HOME>/config/terminal.json`.
-- Реализованы системные команды `help`, `config`, `exit` (см. спецификацию ниже); остальные пока выводят предупреждение о неизвестной команде.
-
-⚙️ 1. Общая структура команд
-
-Все команды вводятся в терминале DOA в виде:
-
-duck <command> [subcommand] [args]
-
-Ответ должен выводиться в стиле системного логирования:
-
-[DOA::INFO] Action completed successfully.
-[DOA::WARN] Missing argument: filename.
-[DOA::SYS] Launching app "Music".
-
-⸻
-
-🔹 СИСТЕМНЫЕ КОМАНДЫ
-
-⸻
-
-help
-
-Назначение:
-Выводит список всех доступных команд и краткое описание.
-
-Пример:
-
-help
-
-Результат:
-
-Available commands:
-open, run, note, config, system, music, file, net, exit
-Use 'help <command>' for more info.
-
-⸻
-
-exit
-
-Назначение:
-Завершает сессию терминала.
-
-Поведение:
-• Сохраняет историю команд в logs/session.log
-• Завершает процесс приложения.
-
-⸻
-
-config
-
-Назначение:
-Показывает или изменяет настройки терминала (тема, цвет, путь заметок и т.д.)
-
-Примеры:
-
-config view
-config set theme neon-green
-config set music.volume 60
-
-⸻
-
-🔹 СИСТЕМНЫЕ / ОС КОМАНДЫ
-
-⸻
-
-run <program>
-
-Назначение:
-Запускает локальное приложение macOS или бинарный файл.
-
-Примеры:
-
-run safari
-run code
-
-Поведение:
-Выполняет open -a "<program>",
-если не найдено — возвращает ошибку [DOA::ERROR] App not found.
-
-⸻
-
-open <url | path>
-
-Назначение:
-Открывает сайт, файл или папку.
-
-Примеры:
-
-open youtube.com
-open ~/Documents
-
-Поведение:
-• Если содержит “http” или “.com” → открыть в браузере
-• Если локальный путь → открыть в Finder
-
-⸻
-
-system info
-
-Назначение:
-Показывает системную информацию.
-
-Вывод:
-
-OS: macOS 15.1
-CPU: Apple M2
-RAM: 16GB
-Uptime: 3h 45m
-Battery: 82%
-
-⸻
-
-system time
-
-Назначение:
-Показывает текущее время и дату.
-
-⸻
-
-system restart
-
-Назначение:
-Перезапускает DOA-процесс (без выхода из приложения).
-
-⸻
-
-🔹 ЗАМЕТКИ / ДОКУМЕНТЫ
-
-⸻
-
-note new <title>
-
-Назначение:
-Создаёт новую Markdown-заметку в ~/DOA/notes/.
-
-Пример:
-
-note new "System Architecture"
-
-Поведение:
-Создаёт файл System Architecture.md и открывает в встроенном редакторе.
-
-⸻
-
-note list
-
-Назначение:
-Показывает список всех заметок.
-
-Пример вывода:
-
-[1] System Architecture.md
-[2] Ideas.md
-[3] Todo.md
-
-⸻
-
-note open <title>
-
-Назначение:
-Открывает заметку в терминальном просмотрщике.
-
-Пример:
-
-note open Ideas
-
-⸻
-
-note delete <title>
-
-Назначение:
-Удаляет заметку после подтверждения.
-
-⸻
-
-note edit <title>
-
-Назначение:
-Открывает встроенный текстовый редактор (Vim-подобный режим).
-
-⸻
-
-🔹 ФАЙЛОВЫЕ ОПЕРАЦИИ
-
-⸻
-
-file list [path]
-
-Назначение:
-Выводит список файлов и папок.
-
-file list ~/Downloads
-
-⸻
-
-file read <filename>
-
-Назначение:
-Выводит содержимое файла в терминал.
-
-⸻
-
-file delete <filename>
-
-Назначение:
-Удаляет файл с подтверждением.
-
-⸻
-
-file copy <src> <dst>
-
-Назначение:
-Копирует файл из одной директории в другую.
-
-⸻
-
-file move <src> <dst>
-
-Назначение:
-Перемещает файл.
-
-⸻
-
-file mkdir <name>
-
-Назначение:
-Создаёт новую директорию.
-
-⸻
-
-🔹 МУЗЫКА / МЕДИА
-
-⸻
-
-music play
-
-Назначение:
-Запускает системный плеер (Apple Music / Spotify).
-
-⸻
-
-music pause
-
-Назначение:
-Ставит воспроизведение на паузу.
-
-⸻
-
-music next
-
-Назначение:
-Переключает трек.
-
-⸻
-
-music volume <0–100>
-
-Назначение:
-Изменяет громкость системы.
-
-⸻
-
-music status
-
-Назначение:
-Показывает текущий трек и состояние плеера.
-
-⸻
-
-🔹 СЕТЬ / WEB
-
-⸻
-
-net ping <address>
-
-Назначение:
-Проверяет доступность сервера.
-
-net ping google.com
-
-⸻
-
-net ip
-
-Назначение:
-Показывает текущий IP-адрес устройства.
-
-⸻
-
-net speed
-
-Назначение:
-Тестирует скорость соединения (через speedtest-cli или встроенную утилиту).
-
-⸻
-
-🔹 ЖУРНАЛ / ЛОГИ
-
-⸻
-
-log show
-
-Назначение:
-Выводит список последних 20 команд и их статус.
-
-⸻
-
-log export
-
-Назначение:
-Сохраняет историю команд в ~/DOA/logs/session\_<date>.log.
-
-⸻
-
-log clear
-
-Назначение:
-Очищает журнал команд (с подтверждением).
-
-⸻
-
-🔹 ПОЛЬЗОВАТЕЛЬСКИЕ / СИСТЕМНЫЕ ФУНКЦИИ
-
-⸻
-
-theme list
-
-Назначение:
-Показывает список тем интерфейса.
-
-⸻
-
-theme set <name>
-
-Назначение:
-Меняет цветовую схему (например, theme set greenmatrix).
-
-⸻
-
-alias set <short> <command>
-
-Назначение:
-Создаёт короткую команду (алиас).
-
-Пример:
-
-alias set g open google.com
-
-⸻
-
-alias list
-
-Показывает все активные алиасы.
-
-⸻
-
-💾 СТРУКТУРА ПАПОК
-
-/DOA/
-├─ notes/ → markdown-файлы заметок
-├─ logs/ → журналы сессий
-├─ config.json → настройки пользователя
-├─ themes/ → JSON-файлы тем
-├─ cache/ → временные данные
-└─ bin/ → вспомогательные утилиты
-
-⸻
-
-Хочешь, я теперь превращу это в готовый COMMANDS.md (GitHub-совместимый файл, красиво оформленный),
-чтобы можно было вставить прямо в репозиторий проекта DOA?
+# Install PyInstaller
+pip3 install pyinstaller
+
+# Build single-file executable
+pyinstaller --onefile --name Duck duck.py
+
+# Result: dist/Duck
+```
+
+## Usage
+
+### Double-click Duck
+Opens Terminal with interactive menu:
+```
+==================================================
+          🦆  D U C K
+      AI Workflow Automation
+==================================================
+
+  [1]  Trigger Duck
+  [2]  Settings
+  [3]  Hammerspoon Hotkey
+  [4]  Exit
+```
+
+### Hammerspoon Hotkey
+1. Run Duck, select [3]
+2. Copy the Lua snippet
+3. Paste into `~/.hammerspoon/init.lua`
+4. Reload Hammerspoon
+5. Press **Cmd+Alt+L** to trigger Duck headlessly
+
+## Data Location
+
+All settings stored in:
+```
+~/Desktop/duckinfo/
+├── config.json    # Settings
+└── times/         # Run logs
+```
+
+## Gatekeeper (First Run)
+
+If macOS blocks the app:
+1. Right-click Duck → Open
+2. Click "Open" in the dialog
+3. Only needed once
+
+## Send to Friend
+
+Just send them **one file**: `Duck`
+
+They double-click it. Done.
