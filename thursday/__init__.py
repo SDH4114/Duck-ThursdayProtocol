@@ -1,0 +1,1 @@
+"""Thursday assistant package."""

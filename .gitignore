@@ -38,6 +38,7 @@ Thumbs.db
 
 # === OS cache ===
 __pycache__/
+*.egg-info/
 *.tmp
 *.bak
 *.old
